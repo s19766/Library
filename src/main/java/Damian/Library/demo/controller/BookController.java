@@ -2,6 +2,7 @@ package Damian.Library.demo.controller;
 
 import Damian.Library.demo.model.Book;
 import Damian.Library.demo.service.BookService;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -17,6 +18,7 @@ public class BookController {
         this.bookService = bookService;
     }
 
+    @GetMapping
     public List<Book> getBooks(){
         return bookService.finaAll();
     }
