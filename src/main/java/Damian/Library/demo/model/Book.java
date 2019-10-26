@@ -2,23 +2,21 @@ package Damian.Library.demo.model;
 
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
 public class Book {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int ID;
     private String name;
     private String author;
     private int pages;
 
-    public Book(){
-
-    }
-
-    public Book(int ID, String name, String author, int pages) {
-        this.ID = ID;
+    public Book(String name, String author, int pages) {
         this.name = name;
         this.author = author;
         this.pages = pages;

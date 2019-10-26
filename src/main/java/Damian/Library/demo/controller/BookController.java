@@ -25,7 +25,7 @@ public class BookController {
 
      @GetMapping("/add")
      public Book getSaveBooks() {
-        Book book = new Book(1, "damian", "eggert", 522);
+        Book book = new Book("damian", "eggert", 522);
      return bookService.saveBook(book);
 }
 }
