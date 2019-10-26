@@ -1,4 +1,10 @@
 package Damian.Library.demo.repository;
 
-public class BookRepository {
+import Damian.Library.demo.model.Book;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface BookRepository extends JpaRepository<Book, Integer> {
+
+
+
 }

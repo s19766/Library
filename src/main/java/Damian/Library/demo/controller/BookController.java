@@ -22,4 +22,10 @@ public class BookController {
     public List<Book> getBooks(){
         return bookService.finaAll();
     }
+
+     @GetMapping("/add")
+     public Book getSaveBooks() {
+        Book book = new Book(1, "damian", "eggert", 522);
+     return bookService.saveBook(book);
+}
 }

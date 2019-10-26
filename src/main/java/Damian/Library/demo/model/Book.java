@@ -1,7 +1,13 @@
 package Damian.Library.demo.model;
 
+
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
 public class Book {
 
+    @Id
     private int ID;
     private String name;
     private String author;
